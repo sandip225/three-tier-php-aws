@@ -14,10 +14,10 @@ sudo dnf install git -y
 #!/bin/bash
 sudo systemctl start httpd
 cd /var/www/html
-sudo git clone https://github.com/ajitinamdar-tech/three-tier-architecture-aws.git
+sudo git clone https://github.com/sandip225/three-tier-php-aws
 sudo mkdir api
-sudo mv /var/www/html/three-tier-architecture-aws/backend/api/* /var/www/html/api/
-sudo rm -rf /var/www/html/three-tier-architecture-aws
+sudo mv /var/www/html/three-tier-php-aws/backend/api/* /var/www/html/api/
+sudo rm -rf /var/www/html/three-tier-php-aws
 sed -i 's/update-me-host/insert-your-database-host-here/g' /var/www/html/api/db_connection.php
 sed -i 's/update-me-username/insert-your-database-username-here/g' /var/www/html/api/db_connection.php
 sed -i 's/update-me-password/insert-your-database-password-here/g' /var/www/html/api/db_connection.php
